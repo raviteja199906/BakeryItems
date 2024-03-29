@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bakery items</title>
+    <link rel="icon" href="favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-size: 100%;
+            /* overflow: scroll; */
+        }
+        .parent{
+            width: 123px;
+            height: 40px;
+        }
+        .imgA{
+            width: 123px;
+            height: 40px;
+            margin: 5px;
+        }
+        .parent1{
+            width:100%;
+            height:99px;
+            color: black;
+            background-color: white;
+            /* margin-top: -30px; */
+            /* background-color: white; */
+            /* border-bottom: 2px solid gainsboro; */
+            position: relative;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            margin: -8px;
+        
+        }
+        .parent1 ul{
+            display:inline-flex;
+            list-style: none;
+            font-size: 15px;
+        }
+        .parent1 ul li{
+            padding:20px;
+        }
+        .parent1 ul .parent2 ul{
+            display: flex;
+            flex-direction: column;
+
+        }
+        /* .parent1 ul :hover{
+            background-color: white;
+        } */
+        .parent .list :hover{
+            background-color: rgb(227, 225, 225);
+        }
+        #abc .list1 :hover{
+            background-color: rgb(227, 225, 225);
+        }
+        .parent2 li:hover{
+            background-color:lightskyblue;
+            color: black;
+        }
+    
+        .list:hover{
+            background-color:rgb(227, 225, 225);
+            /* border-radius: 10px; */
+            /* border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-bottom: 0; */
+        }
+        .parent1 ul li:hover .parent {
+            display: block;
+            background-color:rgb(227, 225, 225);
+            position: absolute;
+            border-radius: 20px;
+            margin-left: 15px;
+            /* z-index: 2; */
+        }
+        .list1:hover{
+            background-color: white;
+            border-radius: 0px;
+        }
+        .parent2{
+            /* color: black; */
+            display:none;
+            /* margin: 0 auto;
+            height: 150px;
+            display: block;
+            width: 100%; */
+        }
+        #abc:hover .parent2{
+            display: block;
+        }
+        #abc:hover .parent2 ul .li1{
+            display: block;
+            background-color: white;
+            border-radius: 20px;
+            position: absolute;
+            padding: 20px;
+            font-size: 20px;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+        .parent6{
+            margin: 0px;
+            height: 120px;
+            width: 100%;
+        }
+        .imgB{
+            margin: 0px;
+            height: 120px;
+            width: 100%;
+        }
+
+        .para{
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        pre{
+            font-size: 14px;
+        }
+
+
+        .small-icon{
+            margin-left: 700px;
+        }
+        .dwnl1{
+            display: block;
+            text-align: center;
+            font-size: 40px;
+            padding: 20px;
+            border-radius: 30px;
+        }
+        .win-download1{
+            background-color: red;
+            color: white;
+        }
+        .win-download1:hover{
+            opacity: 0.7;
+        }
+        .mac-download1{
+            background-color: dodgerblue;
+            color: white;
+        }
+        .mac-download1:hover{
+            opacity: 0.7;
+        }
+        .edit-online-btn1{
+            background-color: green;
+            color: white;
+        }
+        .edit-online-btn1:hover{
+            opacity: 0.7;
+        }
+        pre{
+            font-size: 17px;
+        }
+        h1{
+            font-size: 30px;
+        }
+
+
+        .parent7{
+            height: 900px;
+            width: 1000px;
+        }
+        .imgC{
+            height: 900px;
+            width: 800px;
+            margin-top: 0px;
+            margin-left: 70px;
+        }
+        .imgC:hover{
+            opacity: 0.7;
+        }
+        .parent4{
+            width:100%;
+            height:300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .figure{
+            position: relative;
+            width:400%;
+            left:0;
+            animation:slide 10s infinite;
+        }
+        .child{
+            position: relative;
+            width:25%;
+            float:left;
+        }
+        .child img{
+            width:100%;
+            height:300px;
+        }
+        @keyframes slide{
+            0%{
+                left:0;
+            }
+            10%{
+                left:0;
+            }
+            20%{
+                left:-100%;
+            }
+            30%{
+                left:-100%;
+            }
+            40%{
+                left:-200%;
+            }
+            50%{
+                left:-200%;
+            }
+            55%{
+                left:-300%;
+            }
+            65%{
+                left:-300%;
+            }
+            66%{
+                left:-200%;
+            }
+            74%{
+                left:-200%;
+            }
+            75%{
+                left:-100%;
+            }
+            85%{
+                left:-100%;
+            }
+            90%{
+                left:0;
+            }
+            100%{
+                left:0;
+            }
+        }
+        #inpt1,#inpt2{
+            width:45px;
+            height: 95px;
+            position: absolute;
+            top:110px;
+            z-index: 2;
+            font-size: 30px;
+        }
+        #inpt2{
+            left:1476px;
+        }
+
+
+        .gallery{
+        width:100%;
+        height:1000px;
+    }
+    .text2{
+        font-size: 40px;
+        text-align: center;
+        position: relative;
+        top:20px;
+        margin-top: 0%;
+    }
+    #img1:hover{
+        opacity: 0.7;
+    }
+    #img2:hover{
+        opacity: 0.7;
+    }
+    #img3:hover{
+        opacity: 0.7;
+    }
+    #img4:hover{
+        opacity: 0.7;
+    }
+    #img5:hover{
+        opacity: 0.7;
+    }
+    #img6:hover{
+        opacity: 0.7;
+    }
+    #img7:hover{
+        opacity: 0.7;
+    }
+    #img8:hover{
+        opacity: 0.7;
+    }
+    #img9:hover{
+        opacity: 0.7;
+    }
+    #img10:hover{
+        opacity: 0.7;
+    }
+    #img11:hover{
+        opacity: 0.7;
+    }
+    #img12:hover{
+        opacity: 0.7;
+    }
+    #img13:hover{
+        opacity: 0.7;
+    }
+    #img14:hover{
+        opacity: 0.7;
+    }
+    #img15:hover{
+        opacity: 0.7;
+    }
+    #img16:hover{
+        opacity: 0.7;
+    }
+    #img17:hover{
+        opacity: 0.7;
+    }
+    #img18:hover{
+        opacity: 0.7;
+    }
+    #img19:hover{
+        opacity: 0.7;
+    }
+    #img20:hover{
+        opacity: 0.7;
+    }
+    .body4{
+            margin-top: 100px;
+            margin-left: 20px;
+            height: 400px;
+            width: 1000px;
+        }
+        .body4:hover{
+        opacity: 0.7;
+    }
+
+
+        .footer{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            }
+            .footer .last{
+                width:100%;
+            height: 350px;
+            background-color: rgb(57, 53, 53);
+            color: white;
+            }
+            h3{
+            display: block;
+            font-size: 20px;
+            /* text-decoration: none; */
+            margin: 50px;
+            }
+            h4{
+                color: rgb(214, 207, 207);
+            display: block;
+            font-size: 17px;
+            /* text-decoration: none; */
+            margin: 0px;   
+            }
+            .footer2{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .last1{
+                width: 100%;
+                height: 80px;
+                background-color: rgb(60, 59, 59);
+                color: azure;
+            }
+        a{
+            text-decoration: none;
+        }
+        li{
+            display: inline;
+            font-size: 17px;
+            text-decoration: none;
+            padding: 40px;
+        }
+        .dwnl{
+            text-align: center;
+            font-size: 20px;
+            padding: 20px;
+        }
+        .win-download{
+            background-color: red;
+            color: white;
+        }
+        .win-download:hover{
+            opacity: 0.7;
+        }
+        .mac-download{
+            background-color: dodgerblue;
+            color: white;
+        }
+        .mac-download:hover{
+            opacity: 0.7;
+        }
+        .edit-online-btn{
+            background-color: green;
+            color: white;
+        }
+        .edit-online-btn:hover{
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="parent1">
+        <ul>
+            <li class="list"><a class="hover" href="https://nicepage.com/" target="_blank"><img class="imgA" src="https://csite.nicepage.com/Images/logo-w.png"></a></li>
+            <li class="list"><a class="hover" href="https://nicepage.com/download" target="_blank">Download</a></li>
+            <li class="list"><a class="hover" href="https://nicepage.com/features" target="_blank">400+ Features</a></li>
+            <li class="list1" id="abc"><a class="hover" href="https://nicepage.com/html-templates" target="_blank" style="color: black;">1000+ Templates <i class="fa fa-character down"></i></a>
+            <div class="parent2">
+               <ul>
+                <li> <a href="https://nicepage.com/templates" >Website Templates</a></li>
+                <li> <a href="https://nicepage.com/website-design">Website Designs</a></li>
+                <li> <a href="https://nicepage.com/wordpress-themes">WordPress Themes</a></li>
+                <li> <a href="https://nicepage.com/joomla-templates">Joomla Templates</a></li>
+                <li> <a href="https://nicepage.com/html-templates">HTML Templates</a></li>
+               </ul>
+            </div>
+            </li>
+            <li class="list1" id="abc"><a href="" target="_blank" class="hover">Website Buliders<i class="fa fa-character down"></i></a>
+            <div class="parent2">
+            <ul>
+                <li><a href="https://nicepage.com/html-website-builder">HTML Website Builder </a></li>
+                <li><a href="https://nicepage.com/wordpress-website-builder">WordPress Website Builder</a></li>
+                <li><a href="https://nicepage.com/joomla-page-builder">Joomla Page Builder</a></li>
+            </ul>
+            </div>
+            </li>
+            <li class="list"><a href="https://nicepage.com/premium?code=sp23" target="_blank" class="hover">Premium</a></li>
+            <li class="list"><a href="https://nicepage.com/forum" target="_blank" class="hover" style="color: black;">Forums</a></li>
+            <li class="list"><a href="https://nicepage.com/blog" target="_blank" class="hover" style="color: black;">Blog</a></li>
+            <li class="list1" id="abc"><a href="" target="_blank" class="hover">Help<i class="fa fa-character down"></i></a>
+            <div class="parent2">
+                <ul>
+                    <li><a href="https://nicepage.com/doc">Documentation</a></li>
+                    <li><a href="https://nicepage.com/Forum/Topic/Create">Contact Support</a></li>
+                </ul>
+            </div>
+            </li>
+            <br>
+
+            <li class="list1" id="abc"><a href="" target="_blank" class="hover">EN<i class="fa fa-character down"></i></a>
+            <div class="parent2">
+            <ul>
+                <li><a href="" target="_blank" >EN</a></li>
+                <li><a href="" target="_blank" >DE</a></li>
+                <li><a href="" target="_blank" >NL</a></li>
+                <li><a href="https://nicepage.com/fr/st/3227973/articles-de-boulangerie-modele-site" target="_blank" >FR</a></li>
+                <li><a href="" target="_blank" >IT</a></li>
+                <li><a href="" target="_blank" >ES</a></li>
+                <li><a href="" target="_blank" >PL</a></li>
+                <li><a href="" target="_blank" >PT</a></li>
+                <li><a href="" target="_blank" >TR</a></li>
+                <li><a href="" target="_blank" >RU</a></li>
+                <li><a href="" target="_blank" >HU</a></li>
+                <li><a href="" target="_blank" >CS</a></li>
+                <li><a href="" target="_blank" >SV</a></li>
+            </ul>
+            </div>
+            </li>
+            <li class="list"><a href="https://nicepage.com/Editor/Account/LogOn" target="_blank" class="hover" style="color: black;">Sign In</a></li>
+            <li class="list"><a href="https://nicepage.com/Editor/Account/Register" target="_blank" class="hover" style="color: black;">Register</a></li>
+        </ul>
+    </div>
+    <div class="parent6">
+    <a href="https://nicepage.com/premium?code=sp23" target="_blank"><img class="imgB" src="https://images01.nicepagecdn.com/cd46d0ff82086185e4d7aa0f/983dd5d6893c550588ea7cff/coupon_28_sp23-1800-4df8.jpg" alt="Big Spring Sale! Up to 50% off!"></a>
+    </div>
+    <div class="row">
+        <ol>
+            <li><a href="https://nicepage.com" title="Home">Home</a></li>|
+            <li><a href="/website-templates" title="Website Templates">Website Templates</a></li>|
+            <li><a href="/c/food-restaurant-website-templates" title="Food &amp; Restaurant">Food &amp; Restaurant</a></li>|
+            <li>Bakery items</li>
+        </ol>
+    </div>
+    <br>
+    <div class="para">
+        <h1>Bakery Items Website Template</h1>
+        <p>Create a professional free website template. Responsive, fully customizable with easy Drag-n-Drop Nicepage editor. Adjust colors, fonts, header and footer, layout and other design elements, as well as content and images.</p>
+    </div>
+    <div class="img-head">
+        "ID"
+        <text>:</text>
+        3227973  &nbsp; | &nbsp; Category : <a href="/c/food-restaurant-website-templates">Food &amp; Restaurant</a>","
+                            <a href="/c/grid-repeater-website-templates">Grid Repeater</a>
+    </div>
+    <div class="small-icon">
+        <a href="/website-templates/preview/bakery-items-3227973?device=desktop" target="_blank" class="demo-link" rel="nofollow"><span>Demo Preview</span>
+        </a>
+    </div>
+    <br>
+
+    <br>
+    <div class="dwnl1">
+        <a class="win-download1" href="#" type="button">Download for Windows</a>
+        <a class="mac-download1" href="#" type="button">Download for Mac</a>
+        <a class="edit-online-btn1" href="#" type="button">Edit Online</a>
+
+        <br>
+        <h1>Edit Template Offline</h1>
+        <pre> 1. Download and Install the Nicepage version for Windows, Mac, WordPress and Joomla from the download page
+            2. Create a new page or select existing
+            3. Click Add new block, search for id 3227973 and click enter</pre>
+    </div>
+    <div class="parent7">
+        <a href="https://nicepage.com/website-templates/preview/bakery-items-3227973?device=desktop" target="_blank"><img class="imgC" alt="Our daily bread bakery Website Design" src="https://images01.nicepagecdn.com/page/33/50/website-design-preview-3350113.jpg"></a>
+    </div>
+    <div class="dwnl">
+        <a class="win-download" href="#" type="button">Download for Windows</a>
+        <a class="mac-download" href="#" type="button">Download for Mac</a>
+        <a class="edit-online-btn" href="#" type="button">Edit Online</a>
+    </div>
+    <div>
+        <h2>Customize with Nicepage</h2>
+        <a href="/website-builder">Website Template Builder</a>
+    </div>
+
+    <hr>
+    <div class="parent4">
+        <!-- <form action="">
+            <input id="inpt1" type="submit" value="<">
+            <input id="inpt2" type="submit" value=">">
+        </form> -->
+        <div class="figure">
+            <div class="child">
+                <a href=""><img src="	https://images01.nicepagecdn.com/page/53/32/website-template-533265.jpg"></a>
+            </div>
+            <div class="child">
+                <a href=""><img src="	https://images01.nicepagecdn.com/page/22/28/website-template-2228447.jpg"></a>
+            </div>
+            <div class="child">
+                <a href=""><img src="	https://images01.nicepagecdn.com/page/79/53/website-template-79539.jpg"></a>
+            </div>
+            <div class="child">
+                <a href=""><img src="https://images01.nicepagecdn.com/page/32/27/website-template-3227972.jpg"></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="gallery">
+        <div class="text2">THE BEST BAKERY ITEMS</div>
+        <br>
+        <div class="mainbody">
+            <div class="free"></div>
+                <div class="body1">
+                    <h1>More from Food & Restaurant Website Templates</h1>
+                      <a href="https://nicepage.com/st/3350651/the-handmade-bakery-website-template"><img src="	https://images01.nicepagecdn.com/page/64/44/website-template-64449.jpg" id="img1"></a>
+                      <!-- <img src="	https://images01.nicepagecdn.com/page/33/50/website-template-3350651.jpg" id="img2"> -->
+                      <a href="https://nicepage.com/st/70266/cook-your-favorite-food-website-template"><img src="	https://images01.nicepagecdn.com/page/70/26/website-template-70266.jpg" id="img3"></a>
+                      <a href="https://nicepage.com/st/29734/finest-grill-house-restaurant-website-template"><img src="https://images01.nicepagecdn.com/page/29/73/website-template-29734.jpg"id="img4"></a>
+                </div>
+                <div class="body2">
+                    <h1>More from Food & Restaurant Blocks</h1>
+                    <a href="https://nicepage.com/st/533265/fast-food-restaurant-website-template"><img src="	https://images01.nicepagecdn.com/page/53/32/website-template-533265.jpg" id="img5"></a>
+                    <a href="https://nicepage.com/st/2228447/vegetables-and-fruits-website-template"><img src=" https://images01.nicepagecdn.com/page/22/28/website-template-2228447.jpg"id="img6"></a>
+                    <a href="https://nicepage.com/st/2228447/vegetables-and-fruits-website-template"><img src=" https://images01.nicepagecdn.com/page/79/53/website-template-79539.jpg"id="img7" ></a>
+</a>                    <a href="https://nicepage.com/st/533265/fast-food-restaurant-website-template"><img src="https://images01.nicepagecdn.com/page/32/27/website-template-3227972.jpg" id="img8"></a>
+                    <a href="https://nicepage.com/st/533265/fast-food-restaurant-website-template"><img src="https://images01.nicepagecdn.com/page/43/10/website-template-4310765.jpg" id="img9"></a>
+                    <a href="https://nicepage.com/st/533265/fast-food-restaurant-website-template"><img src=" https://images01.nicepagecdn.com/page/89/23/website-template-89239.jpg"id="img10">
+</a>                    <a href="https://nicepage.com/st/533265/fast-food-restaurant-website-template"><img src="https://images01.nicepagecdn.com/page/28/16/website-template-2816697.jpg" id="img11"></a>
+                    <a href="https://nicepage.com/st/533265/fast-food-restaurant-website-template"><img src="https://images01.nicepagecdn.com/page/91/15/website-template-911556.jpg" id="img12"></a>
+                </div>
+                    <div class="body4">
+                    <a href=""><img src="https://images01.nicepagecdn.com/page/32/66/website-design-3266814.jpg" alt=""></a>
+                    <a href="https://nicepage.com/st/2228447/vegetables-and-fruits-website-template"><img src="	https://images01.nicepagecdn.com/page/37/91/website-design-3791316.jpg" alt="">  </a>                  
+                </div>
+                <div class="body3">
+                    <h1>More from Grid Repeater Blocks</h1>
+                    <a href="https://nicepage.com/st/4411670/publication-design-visual-identity-website-template"><img src="	https://images01.nicepagecdn.com/page/40/09/website-template-4009267.jpg" id="img13"></a>
+                    <a href="https://nicepage.com/st/2228447/vegetables-and-fruits-website-template"><img src="	https://images01.nicepagecdn.com/page/35/02/website-template-3502997.jpg" id="img14"></a>
+                    <a href="https://nicepage.com/st/4411670/publication-design-visual-identity-website-template"><img src="	https://images01.nicepagecdn.com/page/44/64/website-template-4464148.jpg" id="img15"></a>
+                    <a href="https://nicepage.com/st/4543762/explore-nature-website-template"><img src="	https://images01.nicepagecdn.com/page/48/81/website-template-4881937.jpg" id="img16"></a>
+                    <a href="https://nicepage.com/st/4411670/publication-design-visual-identity-website-template"><img src="https://images01.nicepagecdn.com/page/44/11/website-template-4411670.jpg"id="img17"></a>
+                   <a href="https://nicepage.com/st/4543762/explore-nature-website-template"><img src="https://images01.nicepagecdn.com/page/43/77/website-template-4377756.jpg" id="img18"></a>
+                   <a href="https://nicepage.com/st/4543762/explore-nature-website-template"><img src="	https://images01.nicepagecdn.com/page/47/33/website-template-4733278.jpg" id="img19"></a>
+                    <a href="https://nicepage.com/st/4411670/publication-design-visual-identity-website-template"><img src="https://images01.nicepagecdn.com/page/32/76/website-template-3276443.jpg" id="img20"></a>
+                </div>
+    <br>
+    
+    <br>
+    <div class="footer">
+        <div class="last">
+            <h3>COMPANY</h3>
+            <h4>FAQ</h4>
+            <h4>Terms 0f Use</h4>
+            <h4>Privacy Policy</h4>
+            <h4>License Agreement</h4>
+            <h4>About Us</h4>
+            <h4>Partners</h4>
+            <h4>Abuse</h4>
+            <h4>Contact Support</h4>
+        </div>
+        <div class="last">
+            <h3>PRODUCT</h3>
+             <h4>Download</h4>
+             <h4>400+ Features</h4>
+             <h4>Review</h4>
+             <h4>Affiliates</h4>
+             <h4>Documentation</h4>
+             <h4>Forum</h4>
+             <h4>Blog</h4>
+        </div>
+        <div class="last">
+        <h3>THEMES & TEMPLATES</h3>
+        <h4>Website Templates</h4>
+        <h4>WordPress Themes</h4>
+        <h4>HTML Templates</h4>
+        <h4>CSS Templates</h4>
+        <h4>Joomla Templates</h4>
+        <h4>WooCommerce Themes</h4>
+        <h4>HTML5 Templates</h4>
+        <h4>One Page Templates</h4>
+        </div>
+        <div class="last">
+            <h3>NICEPAGE</h3>
+        <h4>Website Builder</h4>
+        <h4>HTML Website Builder</h4>
+        <h4>WordPress Website Builder</h4>
+        <h4>Joomla Page Builder</h4>
+        <h4>WYSIWYG HTML Editor</h4>
+        <h4>Static Site Generator</h4>
+        <h4>HTML Code Generator</h4>
+        </div>
+        <div class="last">
+            <h3>WEB DESIGN</h3>
+        <h4>Website Designs</h4>
+        <h4>Web Page Designs</h4>
+        <h4>Web Design</h4>
+        <h4>Web Page Designer</h4>
+        <h4>Landing Pages</h4>
+        <h4>Homepage Designs</h4>
+        <h4>Website Mockup</h4>
+        </div>
+    </div>
+    <div class="footer2">
+        <ul class="last1">
+        <li>Facebook</li>
+        <li>Twitter</li>
+        <li>YouTube</li>
+        <li>Pinterest</li>
+        </ul>
+        <ul class="last1">
+        <li>© 2023 Nicepage Free Website Builder Software - All Rights Reserved</li>
+        </ul>
+     </div>
+     <hr>
+</body>
+</html>
